@@ -1,0 +1,22 @@
+# Ignore node_modules
+node_modules
+
+# Ignore build output
+dist
+build
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore IDE config files
+.idea
+*.iml
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore OS generated files
+Thumbs.db
+.DS_Store

@@ -16,18 +16,18 @@ app.post("/", (req, res) => {
       if (response.statusCode === 200) {
         const weatherData = JSON.parse(data);
         console.log(weatherData);
-        // res.write(
-          //   `<h3>Weather in ${city} is ${weatherData.weather[0].description}</h3>`
-          // );
-          // res.write("<h1>Temperature in " + city + " is " + weatherData.main.temp + "</h1>");
-        //   res.write(
-        //       `<img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png"/>`
-        // );
-        res.send(`<h1> Weather in ${city} is ${weatherData.weather[0].description} <br><br>
-         Temperature in ${city} is ${weatherData.main.temp} degree celsius <br><br>
-         <span><img src="https://openweathermap.org/img/wn/${ weatherData.weather[0].icon }"@2x.png"/></span> </h1>`);
+        var temp=weatherData.main.temp;
+        var describtion=weatherData.weather[0].description;
+        var icon=weatherData.weather[0].icon;
+        var imgURL="http://openweathermap.org/img/wn/"+icon+"@2x.png";
+    
+    
+        res.write("<p>The weather is "+ describtion + "</p>");
+        res.write("<h1>The temperature in " + city +" is "+ temp + " degree celcius</h1>");
+        res.write("<img src="+imgURL+">");
+        res.send();
+
       } else {
-        // res.send("<h1>City not found. Please enter a valid city name.</h1>");
         res.sendFile(__dirname + "/public/failure.html");
       }
     });

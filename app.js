@@ -21,7 +21,7 @@ app.post("/", (req, res) => {
         var imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
         res.write("<h1>It is currently " + temp + "&#8451 " + city + "</h1>");
-        res.write("<h3>The weather is " + description + "</h3>");
+        res.write("<h2>The weather is " + description + "</h2>");
         res.write("<img src=" + imgURL + ">");
         res.send();
       } else {

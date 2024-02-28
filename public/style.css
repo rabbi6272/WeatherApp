@@ -6,7 +6,7 @@ body {
   align-items: center;
   /* background-color: #DED4DE; */
   background-size: cover;
-  background-image: url('https://images.unsplash.com/photo-1521729839347-131a32f9abcb?q=80&w=1797&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+  background-image: url("https://images.unsplash.com/photo-1521729839347-131a32f9abcb?q=80&w=1797&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
 }
 .container {
@@ -17,11 +17,11 @@ body {
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-form{
+form {
   width: 80%;
 }
-label{
-    font-size: 1.5rem;
+label {
+  font-size: 1.5rem;
 }
 @media (max-width: 1200px) {
   .container {
@@ -35,6 +35,6 @@ label{
 }
 @media (max-width: 576px) {
   .container {
-    width: 70vw;
+    width: 80vw;
   }
 }

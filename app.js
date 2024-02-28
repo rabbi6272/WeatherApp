@@ -6,7 +6,6 @@ const http = require("node:https");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-
 app.post("/", (req, res) => {
   const city = req.body.cityName;
   console.log(city);
@@ -16,17 +15,15 @@ app.post("/", (req, res) => {
       if (response.statusCode === 200) {
         const weatherData = JSON.parse(data);
         console.log(weatherData);
-        var temp=weatherData.main.temp;
-        var describtion=weatherData.weather[0].description;
-        var icon=weatherData.weather[0].icon;
-        var imgURL="http://openweathermap.org/img/wn/"+icon+"@2x.png";
-    
-    
-        res.write("<p>The weather is "+ describtion + "</p>");
-        res.write("<h1>The temperature in " + city +" is "+ temp + " degree celcius</h1>");
-        res.write("<img src="+imgURL+">");
-        res.send();
+        var temp = weatherData.main.temp;
+        var description = weatherData.weather[0].description;
+        var icon = weatherData.weather[0].icon;
+        var imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
+        res.write("<h1>It is currently " + temp + "&#8451 " + city + "</h1>");
+        res.write("<h3>The weather is " + description + "</h3>");
+        res.write("<img src=" + imgURL + ">");
+        res.send();
       } else {
         res.sendFile(__dirname + "/public/failure.html");
       }

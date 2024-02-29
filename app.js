@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const http = require("node:https");
+const ejs = require('ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.set('view engine', 'ejs');
 
 app.post("/", (req, res) => {
   const city = req.body.cityName;
@@ -20,10 +22,11 @@ app.post("/", (req, res) => {
         var icon = weatherData.weather[0].icon;
         var imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
 
-        res.write("<h1>It is currently " + temp + "&#8451 in" + city + "</h1>");
-        res.write("<h2>The weather is " + description + "</h2>");
-        res.write("<img src=" + imgURL + ">");
-        res.send();
+        // res.write("<h1>It is currently " + temp + "&#8451 in" + city + "</h1>");
+        // res.write("<h2>The weather is " + description + "</h2>");
+        // res.write("<img src=" + imgURL + ">");
+        // res.send();
+        res.render("responce", {temp: temp, city: city, description: description, imgURL: imgURL});
       } else {
         res.sendFile(__dirname + "/public/failure.html");
       }

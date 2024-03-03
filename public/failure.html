@@ -9,11 +9,12 @@
     rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
     crossorigin="anonymous"
-  />
+    />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container d-flex justify-content-center align-items-center">
-        <form action="/failure" method="post">
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+        <form action="/failure" method="post" class="d-flex flex-column justify-content-center align-items-center">
             <h2 class="display-2">Oops! Something went wrong <br> Please enter a valid city name</h2>
             <button type="submit">Try Again</button>
         </form>

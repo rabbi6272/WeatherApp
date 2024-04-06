@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') -%>
+
+<h1 class="display-1">The Weather App</h1><br /><br />
+<div
+  class="main text-center d-flex justify-content-center align-items-center"
+>
+  <form action="/" method="post" class="text-center">
+    <label for="form-control" class="form-label">Search City:</label>
+    <input
+      type="text"
+      placeholder="Enter city name here"
+      class="form-control text-center"
+      name="cityName"
+    /><br /><br />
+    <button type="submit" class="btn btn-info">Search</button>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs') -%>

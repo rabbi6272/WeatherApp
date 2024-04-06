@@ -1,19 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  text-align: center;
   /* background-color: #DED4DE; */
   background-size: cover;
   background-image: url("https://images.unsplash.com/photo-1521729839347-131a32f9abcb?q=80&w=1797&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
 }
 
-.container {
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.main {
   height: 40vh;
   width: 30vw;
-  background-color: rgba(245, 224, 250, 0.899);
+  background-color: rgba(254, 248, 255, 0.899);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -25,17 +35,17 @@ label {
   font-size: 1.5rem;
 }
 @media (max-width: 1200px) {
-  .container {
+  .main {
     width: 40vw;
   }
 }
 @media (max-width: 786px) {
-  .container {
+  .main {
     width: 50vw;
   }
 }
 @media (max-width: 576px) {
-  .container {
-    width: 85vw;
+  .main {
+    width: 80vw;
   }
 }

@@ -6,9 +6,11 @@ const ejs = require('ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(express.static("views"));
 app.set('view engine', 'ejs');
 
+app.get("/", (req, res) => {
+  res.render("index");
+});
 app.post("/", (req, res) => {
   const city = req.body.cityName;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bbe7d4cf002908df2b1cf82e3d4a947e&units=metric`;
@@ -22,7 +24,7 @@ app.post("/", (req, res) => {
         var imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
         res.render("responce", {temp: temp, city: city, description: description, imgURL: imgURL});
       } else {
-        res.sendFile(__dirname + "/public/failure.html");
+        res.render("failure");
       }
     });
   });

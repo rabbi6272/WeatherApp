@@ -18,11 +18,11 @@ app.post("/", (req, res) => {
     response.on("data", (data) => {
       if (response.statusCode === 200) {
         const weatherData = JSON.parse(data);
-        var temp = weatherData.main.temp;
+        var temp = Math.trunc(weatherData.main.temp);
         var description = weatherData.weather[0].description;
         var icon = weatherData.weather[0].icon;
         var imgURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-        res.render("responce", {temp: temp, city: city, description: description, imgURL: imgURL});
+        res.render("responce", {temp: temp, city: city, description: description, imgURL: imgURL, country: weatherData.sys.country});
       } else {
         res.render("failure");
       }

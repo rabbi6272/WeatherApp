@@ -1,10 +1,17 @@
 <%- include('partials/header.ejs') -%>
 
-  <h2 class="display-2">It is currently <%= temp %>&#8451 in <%=city %></h2><br>
+  <!-- <h2 class="display-2">It is currently <%= temp %>&#8451 in <%=city %></h2><br>
   <h2 class="display-2">The weather is <%=description %></h2><br>
-  <img src="<%=imgURL %>" alt=""><br><br><br>
+  <img src="<%=imgURL %>" alt=""><br><br><br> -->
+    <div class="responce-card">
+      <h3 class="city display-3"><%= city %> <sup class="country"><%= country %></sup> </h3>
+      <h3 class="temp display-3"><%= temp %>&#8451</h3>
+      <h6 class="description "><%= description %></h6>
+      <img src="<%= imgURL %>" alt="">
+    </div><br><br><br>
+
   <form action="/again" method="post">
-    <button type="submit" class="btn btn-warning">Search Again</button>
+    <button type="submit" class="btn btn-info">Search Again</button>
   </form>
 
 <%- include('partials/footer.ejs') -%>

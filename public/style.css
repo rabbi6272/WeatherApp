@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@ body {
   display: grid;
   place-items: center;
   text-align: center;
-  /* background-color: #DED4DE; */
   background-size: cover;
   background-image: url("https://images.unsplash.com/photo-1712646211973-4df68b204983?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
@@ -82,5 +81,154 @@ label {
   }
   .responce-card{
     width: 75vw;
+  }
+} */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+body {
+  height: 100dvh;
+  background-color: #3069a7;
+  color: #E9EFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Nunito;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+h1 {
+  font-family: Montserrat;
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+h2 {
+  font-family: Montserrat;
+  font-size: 4rem;
+  font-weight: 300;
+}
+.bg-1 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.bg-2 {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.b-r {
+  border-radius: 10px;
+}
+.container {
+  height: 80vh;
+  width: 60%;
+  flex-direction: row;
+}
+.col-1,
+.col-2 {
+  width: 50%;
+}
+.col-2 {
+  justify-content: space-evenly;
+}
+.div-1,
+.div-2,
+.div-3 {
+  width: 100%;
+}
+.min-max{
+  flex-direction: row;
+  gap: 20%;
+}
+.div-3 {
+  flex-direction: row;
+  gap: 20%;
+}
+.city-name {
+  display: inline;
+  position: relative;
+}
+.country {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  font-size: medium;
+}
+.img {
+  height: 300px;
+  width: 300px;
+}
+/* index-section */
+.main label {
+  font-family: Nunito;
+  font-size: large;
+}
+.main input {
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  font-size: medium;}
+.btn {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: large;
+  font-weight: 300;
+}
+.bg-circle {
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  /* background: radial-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  ); */
+  background: radial-gradient(
+    #e9efff05, #E9EFFF10
+  ); 
+ 
+}
+@media (max-width: 768px) {
+  h1{
+    font-size: 2.5rem;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  .container {
+    width: 100%;
+    height: 70vh;
+    flex-wrap: wrap;
+  }
+  .col-1 {
+    width: 100%;
+    height: 40%;
+  }
+  .col-2 {
+    width: 100%;
+    height: 60%;
+  }
+  .div-3{
+    gap: 15%;
+  }
+  .bg-circle {
+    top: -100px;
+    left: -100px;
+    height: 450px;
+    width: 450px;
+  }
+  .img {
+    height: 200px;
+    width: 200px;
   }
 }

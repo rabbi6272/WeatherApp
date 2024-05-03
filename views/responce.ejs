@@ -1,17 +1,32 @@
 <%- include('partials/header.ejs') -%>
 
-  <!-- <h2 class="display-2">It is currently <%= temp %>&#8451 in <%=city %></h2><br>
-  <h2 class="display-2">The weather is <%=description %></h2><br>
-  <img src="<%=imgURL %>" alt=""><br><br><br> -->
-    <div class="responce-card">
-      <h3 class="city display-3"><%= city %> <sup class="country"><%= country %></sup> </h3>
-      <h3 class="temp display-3"><%= temp %>&#8451</h3>
-      <h6 class="description "><%= description %></h6>
-      <img src="<%= imgURL %>" alt="">
-    </div><br><br><br>
+    <div class="container d-flex" >
+        <div class="col-2 d-flex">
+            <div class="div-1">
+                <h2 class="city-name"><%= city %></h2>
+                <span class="country"><%= country %></span>
+            </div>
+            <div class="div-2">
+                <h2><%= temp %>°C</h2><br>
+                <h3>Feels like: <%= feelsLike %>°C</h3>
+                <h3><%= description %></h3>
+                <span class="d-flex min-max">
+                    <h3><i class="fa-solid fa-arrow-down-long" style="color: whitesmoke;"></i>: <%= tempMin %>°C </h3>
+                    <h3><i class="fa-solid fa-arrow-up-long" style="color: whitesmoke;"></i>: <%= tempMax %>°C</h3>
+                </span>
+            </div>
+            <div class="div-3 d-flex ">
+                <h3>humidity: <%= humidity %>%</h3>
+                <h3>wind: <%= wind %> km/h</h3>
+            </div>
+        </div>
+        <div class="col-1 d-flex">
+            <img class="img" src="<%= imgURL %>">
+        </div>
+    </div><br>
 
   <form action="/again" method="post">
-    <button type="submit" class="btn btn-info">Search Again</button>
+    <button type="submit" class="btn">Search Again</button>
   </form>
 
 <%- include('partials/footer.ejs') -%>
